@@ -2,12 +2,9 @@ package com.mahendra;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
-
 import com.mahendra.models.Region;
+
+import jakarta.persistence.*;
 
 public class Application {
 
@@ -20,9 +17,9 @@ public class Application {
 		List<Region> regions = query.getResultList();
 		
 		System.out.println("Found "+regions.size()+" regions !");
-		System.out.println("+----------------------------+");
+		System.out.println("+---------------------------------+");
 		for(Region r : regions) {
-			System.out.printf("| %3d | $20s |\n", r.getRegionId(), r.getName());
+			System.out.printf("| %3d | %-25s |\n", r.getRegionId(), r.getName());
 		}
 		em.close();
 		factory.close();

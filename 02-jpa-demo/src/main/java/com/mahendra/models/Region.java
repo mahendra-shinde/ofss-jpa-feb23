@@ -1,9 +1,9 @@
 package com.mahendra.models;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
-@Table(name="REGION")
-@Entity			// Every ENTITY need ID
+@Table(name="REGIONS")
+@Entity
 public class Region {
 	@Id
 	@Column(name="REGION_ID", precision = 4)
