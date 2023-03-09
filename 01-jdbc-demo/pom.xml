@@ -16,6 +16,7 @@
 			<artifactId>ojdbc8</artifactId>
 			<version>21.9.0.0</version>
 		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
