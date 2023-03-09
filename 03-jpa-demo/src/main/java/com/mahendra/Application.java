@@ -23,6 +23,7 @@ public class Application {
 			em.persist(r1);	// Generate the INSERT Query
 			r1.setName("Oceania");	// Generate UPDATE
 			tn.commit();
+			
 		}catch(PersistenceException ex) {
 			ex.printStackTrace();
 		}
