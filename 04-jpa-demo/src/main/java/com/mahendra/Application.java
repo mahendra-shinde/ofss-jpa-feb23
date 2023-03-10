@@ -13,11 +13,18 @@ public class Application {
 		RegionDAO dao = new RegionDAO();
 		Region reg1 = new Region();
 		reg1.setName("India");
-		reg1.setRegionId(100);
+		reg1.setRegionId(103);
 		dao.create(reg1);
 		System.out.println("INFO: New record created ! ");
-		Region reg2 = dao.findById(100);
-		System.out.println("INFO: Region 100 is " + reg2.getName());
+		
+		
+		dao.delete(103);
+		
+		Region reg2 = dao.findById(103);
+		if(reg2 !=null )
+			System.out.println(reg2.getName());
+		else
+			System.out.println("Region 103 not found");
 	}
 
 }
